@@ -1,0 +1,58 @@
+@import "./includes//settings.scss";
+
+html, body {
+    margin: 0;
+    padding:0;
+}
+
+@font-face {
+    font-family: 'Prompt-Bold';
+    font-style: normal;
+    font-weight: bold;
+    src: url("../assets/Fonts/Prompt-Bold.ttf");
+}
+
+
+@font-face {
+    font-family: 'Prompt-Medium';
+    font-style: normal;
+    font-weight: 500;
+    src: url("../assets/Fonts/Prompt-Medium.ttf");
+}
+
+@font-face {
+    font-family: 'Prompt-Regular';
+    font-style: normal;
+    font-weight: normal;
+    src: url("../assets/Fonts/Prompt-Regular.ttf");
+}
+
+body {
+    background-color: #fff;
+
+    .cv-button {
+        background-color: transparent;
+        font-family: sans-serif;
+        text-decoration: none;
+        color: $text-light;
+        font-size: 16px;
+        font-weight: 500;
+        outline: none;
+        border: 1px solid $text-light;
+        padding: 10px 20px;
+        border-radius: 20px;
+        cursor: pointer;
+        transition: all 500ms ease;
+
+        &:hover {
+            background-color: $text-light;
+            border: 2px solid $text-light;
+            color: $primary;
+        }
+    }
+
+    .cv-button.alt {
+        border: 1px solid $primary;
+        color: $primary;
+    }
+}

@@ -1,0 +1,18 @@
+@import "../../includes/settings.scss";
+
+.footer-container {
+    width: 100%;
+    background-color: $primary;
+
+    .footer {
+        max-width: $maxWidth;
+        margin: 0 auto;
+        display: flex;
+        justify-content: center;
+
+        p {
+            font-family: sans-serif;
+            color: $text-light;
+        }
+    }
+}

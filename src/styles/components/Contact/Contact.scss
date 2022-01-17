@@ -1,0 +1,68 @@
+@import "../../includes/settings.scss";
+
+.contact-container {
+    max-width: $maxWidth;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding-bottom: $spacingBlock;
+
+    h1 {
+        width: 100%;
+        text-align: center;
+        font-family: sans-serif;
+        color: $primary;
+        font-size: 48px;
+        margin: 0;
+        padding: 0;
+        padding-bottom: unset;
+    }
+
+    .contact-content {
+        width: 100%;
+        padding: $spacingBlockMobile 200px 0 200px;
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+
+        .contact-block {
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+            width: 250px;
+
+            a {
+                text-decoration: none;
+                font-size: 16px;
+                font-family: sans-serif;
+                color: $primary;
+
+                &:active, &:visited {
+                    color: $primary;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: $desktop) {
+    .contact-container {
+        padding: 0 $mobileGutter $spacingBlockMobile;
+        h1 {
+            font-size: 36px;
+            padding-bottom: unset;
+        }
+
+        .contact-content {
+            justify-content: center;
+            padding: $spacingBlockMobile $mobileGutter $spacingBlockMobile;
+
+            .contact-block {
+                justify-content: flex-start;
+                gap: 20px;
+                padding: 20px 0;
+            }
+        }
+    }
+}

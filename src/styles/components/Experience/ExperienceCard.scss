@@ -1,0 +1,90 @@
+@import "../../includes/settings.scss";
+
+.experience-card {
+    border-top: 1.5px solid $primary;
+    max-width: 750px;
+    width: 100%;
+    padding: $spacingBlock $mobileGutter 0;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+
+    &:first-of-type {
+        border: unset;
+    }
+
+    .heading {
+        p {
+            font-family: sans-serif;
+            color:#6d6c6c;
+            margin: 0;
+            font-weight: 600;
+        }
+    
+        h2 {
+            color: $primary;
+            font-family: sans-serif;
+            margin: 30px 0 5px 0;
+        }
+    
+        h3 {
+            color: $primary;
+            opacity: 0.7;
+            font-family: sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+    }
+
+    .tech {
+
+        padding-top: 30px;
+
+        h4 {
+            font-family: sans-serif;
+            color: $primary;
+            margin: 0;
+            padding: 0 0 5px 0;
+            
+        }
+
+        p {
+            margin: 0;
+            padding: 0;
+            font-family: sans-serif;
+            color: #333;
+        }
+    }
+
+    .duties {
+        padding-top: 30px;
+
+        h4 {
+            font-family: sans-serif;
+            color: $primary;
+            margin: 0;
+            padding: 0 0 5px 0;
+            
+        }
+
+        p {
+            margin: 0;
+            padding: 0;
+            font-family: sans-serif;
+            color: #333;
+        }
+    }
+}
+
+@media only screen and (max-width: $desktop) {
+    .experience-card {
+        justify-content: center;
+        max-width: unset;
+        width: auto;
+        border: 1.5px solid $primary;
+
+        &:first-of-type {
+            border: 1.5px solid $primary;
+        }
+    }
+}
