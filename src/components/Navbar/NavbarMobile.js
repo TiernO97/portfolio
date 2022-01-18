@@ -20,7 +20,7 @@ const NavbarMobile = (props) => {
 
     const goTo = (x, y) => {
         window.scrollTo({
-            top: y,
+            top: y - 50,
             left: x,
             behavior: 'smooth'
         });

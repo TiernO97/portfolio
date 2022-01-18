@@ -9,7 +9,7 @@
         width: 100%;
         text-align: center;
         font-family: sans-serif;
-        color: grey;
+        color: $text-grey;
         font-weight: 600;
         padding-bottom: 20px;
     }
@@ -44,7 +44,7 @@
 
         p{
             font-family: sans-serif;
-            color: $primary;
+            color: $text-grey;
         }
         h2 {
             width:100%;
@@ -90,7 +90,7 @@
 
             li {
                 font-family: sans-serif;
-                color: $primary;
+                color: $text-grey;
             }
         }
     }
@@ -174,10 +174,16 @@
             .image-container {
                 width: 100%;
                 padding-bottom: 30px;
+                border-top: 1px solid $primary;
+
+                &:first-of-type {
+                    border: unset;
+                }
 
                 .image {
                     width: 100%;
                     box-shadow: unset;
+                    
 
                     img {
                         width: 100%;
