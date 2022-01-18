@@ -4,9 +4,9 @@ import { Mail, Phone, Linkedin } from "react-feather";
 // Styles
 import "../../styles/components/Contact/Contact.scss";
 
-const Contact = () => {
+const Contact = (props) => {
     return (
-        <div className="contact-container">
+        <div ref={props.refProp} className="contact-container">
             <h1>Get in touch!</h1>
             <div className="contact-content">
                 <div className="contact-block">

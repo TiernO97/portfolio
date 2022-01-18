@@ -18,18 +18,14 @@ const NavbarMobile = (props) => {
         props.setIsMobileMenuOpen(!props.isMobileMenuOpen)
     }
 
-    const goTo = (x, y) => {
-        window.scrollTo({
-            top: y - 50,
-            left: x,
-            behavior: 'smooth'
-        });
+    const goTo = (section) => {
+        props.scrollTo(section);
 
         openClose();
     }
 
     return (
-        <div className="navbar-mobile-container">
+        <div ref={props.refProp} className="navbar-mobile-container">
             <div className="navbar">
                 <div className="button-container">
                     <a href="/" className="cv-button alt">CV</a>
@@ -40,11 +36,11 @@ const NavbarMobile = (props) => {
             </div>
             <nav className={props.isMobileMenuOpen ? 'show' : ''}>
                 <ul>
-                <li><NavLink onClick={() => goTo(0,0)} to="/">Home</NavLink></li>
-                <li><NavLink onClick={() => goTo(0,800)} to="/">About</NavLink></li>
-                <li><NavLink onClick={() => goTo(0,1335)} to="/">Projects</NavLink></li>
-                <li><NavLink onClick={() => goTo(0,2666)} to="/">Experience</NavLink></li>
-                <li><NavLink onClick={() => goTo(0,4245)} to="/">Contact</NavLink></li>
+                <li><NavLink onClick={() => goTo("home")} to="/">Home</NavLink></li>
+                <li><NavLink onClick={() => goTo("about")} to="/">About</NavLink></li>
+                <li><NavLink onClick={() => goTo("projects")} to="/">Projects</NavLink></li>
+                <li><NavLink onClick={() => goTo("experience")} to="/">Experience</NavLink></li>
+                <li><NavLink onClick={() => goTo("contact")} to="/">Contact</NavLink></li>
                 </ul>
             </nav>
         </div>

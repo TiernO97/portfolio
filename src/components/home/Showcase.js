@@ -8,9 +8,9 @@ import "../../styles/components/Home/projects.scss";
 import projects from "../../assets/files/projects";
 import ProjectCard from "../ProjectCard/ProjectCard";
 
-const Showcase = () => {
+const Showcase = (props) => {
   return (
-    <div className="projects-container">
+    <div ref={props.refProp} className="projects-container">
       <div className="projects-heading">
         <h1>Projects</h1>
       </div>

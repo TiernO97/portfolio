@@ -6,9 +6,9 @@ import "../../styles/components/Experience/Experience.scss";
 import experience from "../../assets/files/experience";
 import ExperienceCard from './ExperienceCard';
 
-const Experience = () => {
+const Experience = (props) => {
     return (
-        <div className="experience-container">
+        <div ref={props.refProp} className="experience-container">
             <div className="experience">
                 <h1>Experience</h1>
                 <div className="experience-cards">

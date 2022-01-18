@@ -4,7 +4,7 @@ import { connect } from "react-redux";
 
 import "../../styles/components/Navbar/Navbar.scss";
 
-const Navbar = () => {
+const Navbar = (props) => {
 
     const [hasScrolled, setHasScrolled] = useState(false);
 
@@ -29,12 +29,8 @@ const Navbar = () => {
         }
     })
 
-    const goTo = (x, y) => {
-        window.scrollTo({
-            top: y,
-            left: x,
-            behavior: 'smooth'
-        });
+    const goTo = (section) => {
+        props.scrollTo(section);
     }
 
     return (
@@ -45,11 +41,11 @@ const Navbar = () => {
                 </div>
                 <nav>
                     <ul>
-                        <li onClick={() => goTo(0, 0)}><NavLink to="/">Home</NavLink></li>
-                        <li onClick={() => goTo(0, 800)}><NavLink to="/">About</NavLink></li>
-                        <li onClick={() => goTo(0, 1136)}><NavLink to="/">Projects</NavLink></li>
-                        <li onClick={() => goTo(0, 2245)}><NavLink to="/">Experience</NavLink></li>
-                        <li onClick={() => goTo(0, document.body.scrollHeight)}><NavLink to="/">Contact</NavLink></li>
+                        <li onClick={() => goTo("home")}><NavLink to="/">Home</NavLink></li>
+                        <li onClick={() => goTo("about")}><NavLink to="/">About</NavLink></li>
+                        <li onClick={() => goTo("projects")}><NavLink to="/">Projects</NavLink></li>
+                        <li onClick={() => goTo("experience")}><NavLink to="/">Experience</NavLink></li>
+                        <li onClick={() => goTo("contact")}><NavLink to="/">Contact</NavLink></li>
                     </ul>
                 </nav>
             </div>
