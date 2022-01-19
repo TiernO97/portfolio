@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { NavLink } from 'react-router-dom';
 import { connect } from "react-redux";
 
@@ -14,6 +14,26 @@ import closeIcon from "../../assets/Icons/close-menu.svg";
 
 const NavbarMobile = (props) => {
 
+    const [hasScrolled, setHasScrolled] = useState(false);
+
+    useEffect(() => {
+
+        const listenToScroll = () => {
+            const navbarOffset = 50;
+            const currentScroll = window.pageYOffset;
+            const showIcon = (currentScroll >= navbarOffset);
+    
+            if(hasScrolled !== showIcon) {
+                setHasScrolled(showIcon)
+            }
+        }
+
+        window.addEventListener('scroll', listenToScroll)
+        return () => {
+            window.removeEventListener('scroll', listenToScroll)
+        }
+    })
+
     const openClose = () => {
         props.setIsMobileMenuOpen(!props.isMobileMenuOpen)
     }
@@ -25,7 +45,7 @@ const NavbarMobile = (props) => {
     }
 
     return (
-        <div ref={props.refProp} className="navbar-mobile-container">
+        <div ref={props.refProp} className={`navbar-mobile-container ${hasScrolled ? "scrolled" : ""} `}>
             <div className="navbar">
                 <div className="button-container">
                     <a href="/" className="cv-button alt">CV</a>
