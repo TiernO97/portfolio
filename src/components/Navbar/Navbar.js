@@ -2,6 +2,8 @@ import React, { useEffect, useState } from 'react';
 import { NavLink } from "react-router-dom";
 import { connect } from "react-redux";
 
+import CV from "../../assets/files/CV - Cian Tiernan.pdf";
+
 import "../../styles/components/Navbar/Navbar.scss";
 
 const Navbar = (props) => {
@@ -37,7 +39,7 @@ const Navbar = (props) => {
         <div className={`navbar-container ${hasScrolled ? "scrolled": ""}`}>
             <div className="navbar">
                 <div className="cv-container">
-                    <a href="/" className="cv-button">Download my CV!</a>
+                    <a href={CV} target="_blank" rel="noopener noreferrer" className="cv-button" >Download my CV!</a>
                 </div>
                 <nav>
                     <ul>

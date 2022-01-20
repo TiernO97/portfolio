@@ -2,6 +2,8 @@ import React, { useEffect, useState } from 'react'
 import { NavLink } from 'react-router-dom';
 import { connect } from "react-redux";
 
+import CV from "../../assets/files/CV - Cian Tiernan.pdf";
+
 // Styles
 import "../../styles/components/Navbar/NavbarMobile.scss";
 
@@ -48,7 +50,7 @@ const NavbarMobile = (props) => {
         <div ref={props.refProp} className={`navbar-mobile-container ${hasScrolled ? "scrolled" : ""} `}>
             <div className="navbar">
                 <div className="button-container">
-                    <a href="/" className="cv-button alt">CV</a>
+                    <a href={CV} target="_blank" rel="noopener noreferrer" className="cv-button alt">CV</a>
                 </div>
                 <div className="menu-toggle" onClick={openClose}>
                     {props.isMobileMenuOpen ? <img src={closeIcon} alt="close menu" /> : <img src={menuIcon} alt="menu" />}
