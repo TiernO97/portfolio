@@ -13,6 +13,7 @@ const Showcase = (props) => {
     <div ref={props.refProp} className="projects-container">
       <div className="projects-heading">
         <h1>Projects</h1>
+        <h3>Click one to view more details!</h3>
       </div>
       <div className="project-cards-container">
         {projects.map((project, index) => (
@@ -20,8 +21,8 @@ const Showcase = (props) => {
             <ProjectCard project={project} />
           </Link>
         ))}
-        <p>I have also worked on partly on many other projects such as Cover in a Click, CMETB.ie and other web applications including a content managemnt system for an art gallery, a restaurant booking system and a data management web application for Teasgasc! For more details about my role in these, get in touch with me!</p>
       </div>
+      <p>I have also worked on partly on many other projects such as Cover in a Click, CMETB.ie and other web applications including a content managemnt system for an art gallery, a restaurant booking system and a data management web application for Teasgasc! For more details about my role in these, get in touch with me!</p>
     </div>
   );
 };

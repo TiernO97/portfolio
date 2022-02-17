@@ -26,7 +26,71 @@ import DPSearch from "../Images/Projects/diamond_point/search.png";
 import EverboldHome from "../Images/Projects/everbold/home.PNG";
 import EverboldMobile from "../Images/Projects/everbold/mobile.PNG";
 
+// Cover in a click
+import CIACHome from "../Images/Projects/cover_in_a_click/home_desktop.png";
+import CIACChangeMobile from "../Images/Projects/cover_in_a_click/change_mobile.png";
+import CIACBlog from "../Images/Projects/cover_in_a_click/blog_desktop.png";
+import CIACRenew from "../Images/Projects/cover_in_a_click/renew_desktop.png";
+import CIACRenewMobile from "../Images/Projects/cover_in_a_click/renew_mobile.png";
+
 const projects = [
+    {
+        name: "Cover In A Click",
+        slug: "cover-in-a-click",
+        date_worked: "November 2021 - February 2022",
+        technologies: [
+            "ReactJS",
+            "NodeJS",
+            "SASS",
+            "MongoDB",
+            "Redux",
+            "Express",
+            "Redux Forms"
+        ],
+        description: "Cover in a click is an Irish company who provides car insurance particularly to younger drivers!",
+        features: [
+            "Admin Panel",
+            "Get a Quote Form",
+            "Renew Policy Form",
+            "Request Policy Change Form",
+            "Responsive",
+            "Blog Section"
+        ],
+        involvement: (
+            <>
+                <p>I worked on Cover in a click with one fellow developer. That developer done the majority of the work including the Get a Quote form, however I was tasked with developing the Renew Policy Form and Request Policy Change form. I also performed general maintanence throughout the site and fixed bugs!</p>
+                <p>While developing the Renew Policy Form, I was introduced to global payments. This is an external API that returns a payment form when a successful request is made. I also was introduced to implementing Recaptcha and an Address lookup component as seen on many websites!</p>
+                <p>I am really happy with the work I done on this site and feel that completing the above tasks helped improve my skills and increased my confidence where I to take up a similar project in the future whether it be as a part of a team or by myself.</p>
+            </>
+        ),
+        featured_image: {
+            src: CIACHome,
+            alt: "Cover in a click home page desktop",
+            title: "Home page on desktop view.",
+        },
+        images: [
+            {
+                src: CIACChangeMobile,
+                alt: "Cover in a click change policy mobile view",
+                title: "Change policy form on mobile view."
+            },
+            {
+                src: CIACBlog,
+                alt: "Desktop blog page cover in a click",
+                title: "Blog page on desktop view."
+            },
+            {
+                src: CIACRenew,
+                alt: "Desktop Cover in a click renew policy Page",
+                title: "Renew policy form on desktop view."
+            },
+            {
+                src: CIACRenewMobile,
+                alt: "Mobile Cover in a click renew policy Page",
+                title: "Renew policy form on mobile view."
+            }
+        ]
+    },
     {
         name: "Queen Healthcare",
         slug: "queenhealthcare",

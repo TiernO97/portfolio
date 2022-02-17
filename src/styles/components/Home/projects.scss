@@ -13,12 +13,21 @@
         width: 100%;
         display: flex;
         justify-content: center;
+        flex-wrap: wrap;
         h1 {
+            text-align: center;
+            width:100%;
             color: $primary;
             font-family: sans-serif;
             font-size: 48px;
             margin: 0;
             padding: 0;
+        }
+
+        h3 {
+            font-family: sans-serif;
+            color: $text-grey;
+            margin: 10px 0 0 0;
         }
     }
 
@@ -29,13 +38,15 @@
         gap: 100px;
         padding: 50px;
 
-        p {
-            max-width: 1000px;
-            color: $text-grey;
-            font-family: sans-serif;
-            font-size: 18px;
-            text-align: center;
-        }
+        
+    }
+
+    p {
+        max-width: 1000px;
+        color: $text-grey;
+        font-family: sans-serif;
+        font-size: 18px;
+        text-align: center;
     }
 }
 
