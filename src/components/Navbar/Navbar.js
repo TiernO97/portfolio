@@ -6,7 +6,7 @@ import CV from "../../assets/files/CV - Cian Tiernan.pdf";
 
 import "../../styles/components/Navbar/Navbar.scss";
 
-const Navbar = (props) => {
+const Navbar = ({scrollTo}) => {
 
     const [hasScrolled, setHasScrolled] = useState(false);
 
@@ -31,10 +31,6 @@ const Navbar = (props) => {
         }
     })
 
-    const goTo = (section) => {
-        props.scrollTo(section);
-    }
-
     return (
         <div className={`navbar-container ${hasScrolled ? "scrolled": ""}`}>
             <div className="navbar">
@@ -43,11 +39,11 @@ const Navbar = (props) => {
                 </div>
                 <nav>
                     <ul>
-                        <li onClick={() => goTo("home")}><NavLink to="/">Home</NavLink></li>
-                        <li onClick={() => goTo("about")}><NavLink to="/">About</NavLink></li>
-                        <li onClick={() => goTo("projects")}><NavLink to="/">Projects</NavLink></li>
-                        <li onClick={() => goTo("experience")}><NavLink to="/">Experience</NavLink></li>
-                        <li onClick={() => goTo("contact")}><NavLink to="/">Contact</NavLink></li>
+                        <li onClick={() => scrollTo("home")}><NavLink to="/">Home</NavLink></li>
+                        <li onClick={() => scrollTo("about")}><NavLink to="/">About</NavLink></li>
+                        <li onClick={() => scrollTo("projects")}><NavLink to="/">Projects</NavLink></li>
+                        <li onClick={() => scrollTo("experience")}><NavLink to="/">Experience</NavLink></li>
+                        <li onClick={() => scrollTo("contact")}><NavLink to="/">Contact</NavLink></li>
                     </ul>
                 </nav>
             </div>

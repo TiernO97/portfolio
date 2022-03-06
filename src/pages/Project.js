@@ -5,8 +5,6 @@ import { useParams } from 'react-router-dom';
 import projects from "../assets/files/projects";
 import Footer from '../components/Footer/Footer';
 import Hero from '../components/home/Hero';
-import Navbar from '../components/Navbar/Navbar';
-import NavbarMobile from '../components/Navbar/NavbarMobile';
 import ProjectDetails from '../components/ProjectDetails/ProjectDetails';
 
 const Project = () => {
@@ -21,8 +19,6 @@ const Project = () => {
 
     return (
         <>
-        <Navbar />
-        <NavbarMobile />
         {project && (
             <>
                 <Hero title={project.name} subtitle={""} text={project.description} />

@@ -151,7 +151,7 @@ const projects = [
         ]
     },
     {
-        name: "Everboold",
+        name: "Everbold",
         slug: "everbold",
         date_worked: "August 2021 - October 2021",
         type: "Brochure Website",
